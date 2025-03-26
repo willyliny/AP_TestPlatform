@@ -8,6 +8,9 @@ import { TdChapter1Questions } from './data/questions/TdChapter1';
 import { TdChapter2Questions } from './data/questions/TdChapter2';
 import { TdChapter3Questions } from './data/questions/TdChapter3';
 import { TdChapter4Questions } from './data/questions/TdChapter4';
+import { TdChapter5Questions } from './data/questions/TdChapter5';
+import { TdChapter6Questions } from './data/questions/TdChapter6';
+import { TdChapter7Questions } from './data/questions/TdChapter7';
 import { chapter3Questions } from './data/questions/Chapter3';
 import { chapter4Questions } from './data/questions/Chapter4';
 
@@ -19,6 +22,9 @@ const chapters: { [key: string]: QuizQuestion[] } = {
   'TdChapter2': TdChapter2Questions,
   'TdChapter3': TdChapter3Questions,
   'TdChapter4': TdChapter4Questions,
+  'TdChapter5': TdChapter5Questions,
+  'TdChapter6': TdChapter6Questions,
+  'TdChapter7': TdChapter7Questions,
   'chapter3': chapter3Questions,
   'chapter4': chapter4Questions,
 };
@@ -29,8 +35,12 @@ const getChapterName = (chapter: string): string => {
     'TdChapter2': 'CH2 : Using Objects',
     'TdChapter3': 'CH3 : Boolean Expressions and if Statements',
     'TdChapter4': 'CH4 : Iteration',
+    'TdChapter5': 'CH5 : Writing Classes',
+    'TdChapter6': 'CH6 : Arrays',
+    'TdChapter7': 'CH7 : ArrayList',
     'chapter3': '第三章：基礎概念',
     'chapter4': '第四章 : test',
+    
   };
   return names[chapter] || chapter;
 };
