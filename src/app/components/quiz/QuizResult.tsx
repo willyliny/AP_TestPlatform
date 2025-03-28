@@ -248,19 +248,23 @@ const QuizResult: React.FC<QuizResultProps> = ({
       {/* Share Modal */}
       {isShareModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-lg p-6 max-w-md w-full">
-            <h3 className="text-xl font-semibold mb-4">分享到 Discord</h3>
+          <div className="bg-gray-800 rounded-lg p-6 max-w-md w-full">
+            <h3 className="text-xl font-semibold mb-4 text-white">分享到 Discord</h3>
             <input
               type="text"
               value={userName}
               onChange={(e) => setUserName(e.target.value)}
               placeholder="請輸入你的名字"
-              className="w-full px-4 py-2 border rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 border border-gray-600 rounded-lg mb-4 
+                focus:outline-none focus:ring-2 focus:ring-blue-500
+                text-white bg-gray-700
+                placeholder:text-gray-400 
+                text-base"
             />
             <div className="flex justify-end gap-3">
               <button
                 onClick={() => setIsShareModalOpen(false)}
-                className="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors"
+                className="px-4 py-2 text-gray-300 hover:bg-gray-700 rounded-lg transition-colors"
               >
                 取消
               </button>
