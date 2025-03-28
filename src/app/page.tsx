@@ -127,6 +127,7 @@ export default function QuizPage() {
             answeredQuestions={answeredQuestions}
             onRestart={handleRestart}
             onSelectChapter={() => handleChapterChange(currentChapter)}
+            chapterName={getChapterName(currentChapter)}
           />
         </div>
       </div>

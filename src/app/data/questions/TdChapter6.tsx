@@ -121,7 +121,7 @@ System.out.println(getValue(arr, 2, 1));`,
                 }
             }
         ],
-        correctAnswer: 1,
+        correctAnswer: 2,
         explanationEN: "Option B is correct because: 1) It correctly declares an array using int[] arr, 2) The array {40, 30, 20, 10, 0} with getValue(arr, 1, 2) will return data[1] + data[2] = 30 + 20 = 50. The other options are incorrect because: A) incorrect array declaration syntax, C) wrong values in array, D) incorrect array declaration and wrong indices, E) wrong values and indices.",
         explanationCN: "選項B是正確的，因為：1) 正確使用int[] arr聲明數組，2) 數組{40, 30, 20, 10, 0}使用getValue(arr, 1, 2)將返回data[1] + data[2] = 30 + 20 = 50。其他選項不正確，因為：A) 數組聲明語法錯誤，C) 數組值錯誤，D) 數組聲明錯誤且索引錯誤，E) 值和索引都錯誤。"
     },
@@ -186,7 +186,7 @@ int[] array2 = addNum(array1, 2, 4, 5);`,
                 }
             }
         ],
-        correctAnswer: 1,
+        correctAnswer: 0,
         explanationEN: "Option B is correct because: 1) The addNum method creates a new array of the same length initialized to all zeros, 2) Then it only modifies elements at indices first and second by adding num to the values from the original array, 3) With array1 = {-5, -5, 13, 0, 9, 0, 0} and addNum(array1, 2, 4, 5), the new array will keep 13 at index 2 and 9 at index 4, resulting in {0, 0, 13, 0, 9, 0, 0}.",
         explanationCN: "選項B是正確的，因為：1) addNum方法創建一個相同長度的新數組並初始化為全0，2) 然後它只修改first和second索引處的元素，將num加到原數組的對應值上，3) 使用array1 = {-5, -5, 13, 0, 9, 0, 0}和addNum(array1, 2, 4, 5)，新數組將在索引2保持13，在索引4保持9，結果為{0, 0, 13, 0, 9, 0, 0}。"
     },
@@ -657,7 +657,7 @@ public static void doSome(int[] arr, int lim)
             { text: "D. I and III only" },
             { text: "E. II and III only" }
         ],
-        correctAnswer: 0,
+        correctAnswer: 1,
         explanationEN: "Option A (I only) is correct because:\n\n1) For combination I (lim=5, S executes 0 times, T executes 5 times):\n   - If all array elements are >= 5, the while loop will stop immediately (arr[k] < lim is false)\n   - Statement S never executes because arr[k] is never < lim\n   - Statement T never executes because the loop condition fails immediately\n\n2) Combination II (lim=7, S executes 4 times, T executes 9 times) is impossible because:\n   - T must execute the same number of times as the loop iterates\n   - S executes only when arr[k] > v is true\n   - The numbers don't align with possible array traversal patterns\n\n3) Combination III (lim=3, S executes 5 times, T executes 2 times) is impossible because:\n   - T must execute at least as many times as S (since T is the loop increment)\n   - It's impossible for S to execute more times than T",
         explanationCN: "選項A（僅I）是正確的，因為：\n\n1) 對於組合I（lim=5，S執行0次，T執行5次）：\n   - 如果所有數組元素都 >= 5，while循環將立即停止（arr[k] < lim為假）\n   - 語句S從不執行，因為arr[k]永遠不小於lim\n   - 語句T從不執行，因為循環條件立即失敗\n\n2) 組合II（lim=7，S執行4次，T執行9次）是不可能的，因為：\n   - T必須執行與循環迭代相同的次數\n   - S只在arr[k] > v為真時執行\n   - 這些數字與可能的數組遍歷模式不符\n\n3) 組合III（lim=3，S執行5次，T執行2次）是不可能的，因為：\n   - T必須執行至少與S相同的次數（因為T是循環增量）\n   - S不可能執行比T更多的次數"
     },
@@ -747,7 +747,7 @@ for(int k = 0; k < data.length - 1; k++)
             { text: "D. I and II only" },
             { text: "E. I and III only" }
         ],
-        correctAnswer: 2,
+        correctAnswer: 0,
         explanationEN: "Option C (III only) is correct because:\n1) Code segment III correctly:\n   - Uses proper bounds (k < data.length - 1)\n   - Compares adjacent elements (data[k] > data[k + 1])\n   - Returns false when out of order\n   - Returns true only after checking all elements\n\nThe other options are incorrect because:\nI) Starts at k=1 and uses k-1, which could miss first element comparison\nII) Uses incorrect bounds that would cause ArrayIndexOutOfBoundsException\n   when checking data[k + 1] at the last element",
         explanationCN: "選項C（僅III）是正確的，因為：\n1) 代碼段III正確地：\n   - 使用適當的邊界（k < data.length - 1）\n   - 比較相鄰元素（data[k] > data[k + 1]）\n   - 當順序錯誤時返回false\n   - 只有在檢查所有元素後才返回true\n\n其他選項不正確，因為：\nI) 從k=1開始並使用k-1，可能會漏掉第一個元素的比較\nII) 使用錯誤的邊界，在檢查最後一個元素的data[k + 1]時會導致ArrayIndexOutOfBoundsException"
     },
@@ -817,7 +817,7 @@ for(int n: nums)
             { text: "D. II and III only" },
             { text: "E. I, II, and III" }
         ],
-        correctAnswer: 1,
+        correctAnswer: 0,
         explanationEN: "Option B (I and II only) is correct because:\n1) Code segment I would work except it's missing k++ in the while loop\n2) Code segment II correctly:\n   - Uses proper array indexing to modify elements\n   - Has correct loop bounds and increment\n3) Code segment III doesn't work because:\n   - In a for-each loop, n is a copy of each element\n   - Modifying n doesn't affect the original array\n\nTherefore, only II will actually update the array correctly.",
         explanationCN: "選項B（I和II）是正確的，因為：\n1) 代碼段I本來可以工作，但缺少while循環中的k++\n2) 代碼段II正確地：\n   - 使用正確的數組索引來修改元素\n   - 有正確的循環邊界和增量\n3) 代碼段III不能工作，因為：\n   - 在for-each循環中，n是每個元素的副本\n   - 修改n不會影響原始數組\n\n因此，只有II會正確地更新數組。"
     },
@@ -1317,7 +1317,7 @@ for(int k = 0; k < temp.length - startIndex; k++)
             { text: "D. I and II" },
             { text: "E. II and III" }
         ],
-        correctAnswer: 1,
+        correctAnswer: 4,
         explanationEN: "Option B (II only) is correct because:\n1) Code segment II correctly:\n   - Starts at the end of the array (words.length - 1)\n   - Iterates backwards until reaching startIndex\n   - Concatenates each word in reverse order\n2) The other segments are incorrect because:\n   - Segment I tries to concatenate words in wrong order and uses invalid array indices\n   - Segment III creates unnecessary temporary array and has complex logic that doesn't achieve the desired result\n3) Given the example:\n   - startIndex = 2 means start with \"Gorilla\"\n   - Elements should appear in reverse order\n   - Expected output \"CarHouseGorilla\" is achieved by segment II",
         explanationCN: "選項B（僅II）是正確的，因為：\n1) 代碼段II正確地：\n   - 從數組末尾開始（words.length - 1）\n   - 向後迭代直到達到startIndex\n   - 按逆序連接每個單詞\n2) 其他段不正確，因為：\n   - 段I嘗試以錯誤的順序連接單詞並使用無效的數組索引\n   - 段III創建不必要的臨時數組並具有無法達到所需結果的複雜邏輯\n3) 根據示例：\n   - startIndex = 2表示從\"Gorilla\"開始\n   - 元素應該按逆序出現\n   - 段II實現了預期輸出\"CarHouseGorilla\""
     },
@@ -1746,7 +1746,7 @@ public int mystery(int num)
             { text: "D. The smallest value is at position m." },
             { text: "E. The largest value that is smaller than n is at position m." }
         ],
-        correctAnswer: 4,
+        correctAnswer: 2,
         explanationEN: "Option E is correct because:\n1) The method searches from right to left (highest index to lowest)\n2) It returns the index of the first element found that is less than num\n3) Since it searches from right to left, this will be the rightmost (largest index) element that is less than num\n4) Therefore, the value at position m is the largest value that is smaller than n",
         explanationCN: "選項E是正確的，因為：\n1) 該方法從右到左搜索（從最高索引到最低索引）\n2) 它返回找到的第一個小於num的元素的索引\n3) 由於是從右到左搜索，這將是最右邊（最大索引）的小於num的元素\n4) 因此，位置m的值是小於n的最大值"
     },
@@ -1777,7 +1777,7 @@ public void mystery(int x)
             { text: "D. {20, 23, 21, 42, 45, 69, 51, 54, 39}" },
             { text: "E. {20, 34, 21, 45, 15, 69, 51, 25, 39}" }
         ],
-        correctAnswer: 4,
+        correctAnswer: 0,
         explanationEN: "Option E is correct because:\n1) With x=3, the loop will modify indices 1,4,7\n2) For each modified position:\n   - numbers[1] = numbers[0] + 3 = 17 + 3 = 20\n   - numbers[4] = numbers[3] + 3 = 42 + 3 = 45\n   - numbers[7] = numbers[6] + 3 = 48 + 3 = 51\n3) All other elements remain unchanged",
         explanationCN: "選項E是正確的，因為：\n1) 當x=3時，循環將修改索引1,4,7\n2) 對於每個被修改的位置：\n   - numbers[1] = numbers[0] + 3 = 17 + 3 = 20\n   - numbers[4] = numbers[3] + 3 = 42 + 3 = 45\n   - numbers[7] = numbers[6] + 3 = 48 + 3 = 51\n3) 所有其他元素保持不變"
     },
@@ -1986,7 +1986,7 @@ for (int k = 0; k < arr.length - 1; k++)
             { text: "D. 1 7 3 5 4 3" },
             { text: "E. 7 2 5 3 3 0" }
         ],
-        correctAnswer: 0,
+        correctAnswer: 1,
         explanationEN: "Option A is correct because:\n1) The code prints k and arr[k] when arr[k] > arr[k+1]\n2) For arr = {7, 2, 5, 3, 0, 10}:\n   - k=0: 7>2, prints \"0 2 \"\n   - k=1: 2<5, no print\n   - k=2: 5>3, prints \"2 3 \"\n   - k=3: 3>0, prints \"3 0 \"\n   - k=4: 0<10, no print\n3) Final output is \"0 2 2 3 3 0\"",
         explanationCN: "選項A是正確的，因為：\n1) 當arr[k] > arr[k+1]時，代碼打印k和arr[k]\n2) 對於arr = {7, 2, 5, 3, 0, 10}：\n   - k=0：7>2，打印\"0 2 \"\n   - k=1：2<5，不打印\n   - k=2：5>3，打印\"2 3 \"\n   - k=3：3>0，打印\"3 0 \"\n   - k=4：0<10，不打印\n3) 最終輸出是\"0 2 2 3 3 0\""
     },
@@ -2034,7 +2034,7 @@ for (int j = 0; j < arr.length; j++)
             { text: "D. Implementation 1 does not work as intended, because it will cause an ArrayIndexOutOfBoundsException." },
             { text: "E. Implementation 2 does not work as intended, because it will cause an ArrayIndexOutOfBoundsException." }
         ],
-        correctAnswer: 3,
+        correctAnswer: 1,
         explanationEN: "Option D is correct because:\n1) Implementation 1 has a critical flaw:\n   - When j=0, it tries to access sum[j-1] which is sum[-1]\n   - This causes an ArrayIndexOutOfBoundsException\n2) Implementation 2 works correctly:\n   - Uses nested loops to calculate running sums\n   - For each j, adds up all elements from index 0 to j\n   - No array bounds issues\n3) While Implementation 2 is less efficient (O(n²) vs O(n)), it would work correctly\n\nThe other options are incorrect because:\nA,B,C) Implementation 1 doesn't work at all due to the exception\nE) Implementation 2 works without array bounds issues",
         explanationCN: "選項D是正確的，因為：\n1) 實現1有一個關鍵缺陷：\n   - 當j=0時，它試圖訪問sum[j-1]，即sum[-1]\n   - 這會導致ArrayIndexOutOfBoundsException\n2) 實現2正確工作：\n   - 使用嵌套循環計算運行總和\n   - 對於每個j，加上從索引0到j的所有元素\n   - 沒有數組邊界問題\n3) 雖然實現2效率較低（O(n²) vs O(n)），但它能正確工作\n\n其他選項不正確，因為：\nA,B,C) 實現1由於異常而完全無法工作\nE) 實現2沒有數組邊界問題"
     },

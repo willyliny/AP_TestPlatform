@@ -208,11 +208,11 @@ z = (x + y) / 2;
                 text: "I, II, and III",
             },
         ],
-        correctAnswer: 3,
+        correctAnswer: 2,
         explanationEN:
-            "Because z is an int variable, only I and II can be used to replace the missing code.",
+            "Options I and II are valid because they both declare z as an int variable, which matches the type needed for the arithmetic operation (x + y) / 2. Option III declares z as a boolean, which cannot store the result of arithmetic operations.",
         explanationCN:
-            "因為 z 是 int 型別，所以只能使用 I 和 II。",
+            "選項 I 和 II 都是有效的，因為它們都將 z 宣告為 int 變數，符合算術運算 (x + y) / 2 所需的型別。選項 III 將 z 宣告為 boolean，無法儲存算術運算的結果。",
     },
     {
         id: 5,
@@ -808,28 +808,30 @@ num *= num;
                 "language": "java"
             }
         },
-        "code": "",
-        "language": "java",
-        "options": [
+        code: "",
+        language: "java",
+        options: [
             {
-                "text": "A. The code segment leaves both k and count unchanged."
+                text: "A. The code segment leaves both k and count unchanged.",
             },
             {
-                "text": "B. The code segment increases both k and count by 2."
+                text: "B. The code segment increases both k and count by 2.",
             },
             {
-                "text": "C. The code segment increases k by 4 and count by 2."
+                text: "C. The code segment increases k by 4 and count by 2.",
             },
             {
-                "text": "D. The code segment leaves k unchanged and increases count by 2."
+                text: "D. The code segment leaves k unchanged and increases count by 2.",
             },
             {
-                "text": "E. The code segment increases k by 2 and leaves count unchanged."
-            }
+                text: "E. The code segment increases k by 2 and leaves count unchanged.",
+            },
         ],
-        "correctAnswer": 4,
-        "explanationEN": "The correct answer is D. The code performs the following steps:\n1. `k++` increases `k` by 1.\n2. `k++` increases `k` by another 1, so `k` is now increased by 2.\n3. `count++` increases `count` by 1.\n4. `k--` decreases `k` by 1, so `k` is now increased by 1 in total.\n5. `count++` increases `count` by another 1, so `count` is now increased by 2 in total.\n6. `k--` decreases `k` by 1, so `k` returns to its original value.\n\nTherefore, `k` remains unchanged, and `count` increases by 2.",
-        "explanationCN": "正確答案為 D。程式執行以下步驟：\n1. `k++` 將 `k` 增加 1。\n2. `k++` 再次將 `k` 增加 1，現在 `k` 總共增加了 2。\n3. `count++` 將 `count` 增加 1。\n4. `k--` 將 `k` 減少"
+        correctAnswer: 3,
+        explanationEN: 
+            "Let's track the changes: 1) k++ (k increases by 1), 2) k++ (k increases by 2 total), 3) count++ (count is 1), 4) k-- (k increases by 1 total), 5) count++ (count is 2), 6) k-- (k returns to original value). Therefore, k is unchanged and count increases by 2.",
+        explanationCN:
+            "讓我們追蹤變化：1) k++ (k增加1)，2) k++ (k總共增加2)，3) count++ (count為1)，4) k-- (k總共增加1)，5) count++ (count為2)，6) k-- (k回到原始值)。因此，k保持不變，count增加2。",
     },
     {
         "id": 16,
@@ -843,28 +845,30 @@ x -= 3 / 2;`,
                 "language": "java"
             }
         },
-        "code": "",
-        "language": "java",
-        "options": [
+        code: "",
+        language: "java",
+        options: [
             {
-                "text": "A. -1.5"
+                text: "A. -1.5",
             },
             {
-                "text": "B. 1"
+                text: "B. 1",
             },
             {
-                "text": "C. 9"
+                text: "C. 9",
             },
             {
-                "text": "D. 15.5"
+                text: "D. 15.5",
             },
             {
-                "text": "E. 16"
-            }
+                text: "E. 16",
+            },
         ],
-        "correctAnswer": 5,
-        "explanationEN": "The correct answer is E. The code performs the following steps:\n1. Initialize x = 5.\n2. Execute x += 6 * 2. Result: x = 5 + 12 = 17.\n3. Execute x -= 3 / 2. Note that 3 / 2 in Java is integer division, resulting in 1. Result: x = 17 - 1 = 16.\n\nTherefore, the final value of x is 16.",
-        "explanationCN": "正確答案為 E。程式執行以下步驟：\n1. 初始化 x = 5。\n2. 執行 x += 6 * 2，結果為 x = 5 + 12 = 17。\n3. 執行 x -= 3 / 2。注意，在 Java 中，3 / 2 是整數除法，結果為 1。因此，x = 17 - 1 = 16。\n\n因此，x 的最終值為 16。"
+        correctAnswer: 4,
+        explanationEN:
+            "Let's solve step by step: 1) x = 5, 2) x += 6 * 2 means x = 5 + 12 = 17, 3) x -= 3 / 2 means x = 17 - 1 = 16 (note: 3/2 is integer division resulting in 1). The final value is 16.",
+        explanationCN:
+            "讓我們逐步解決：1) x = 5，2) x += 6 * 2 意味著 x = 5 + 12 = 17，3) x -= 3 / 2 意味著 x = 17 - 1 = 16（注意：3/2 是整數除法，結果為1）。最終值為 16。",
     },
     {
         "id": 17,
@@ -884,28 +888,28 @@ System.out.println(a+c);
                 "language": "java"
             }
         },
-        "code": "",
-        "language": "java",
-        "options": [
+        code: "",
+        language: "java",
+        options: [
             {
-                "text": "A. 9"
+                text: "A. 9",
             },
             {
-                "text": "B. 10"
+                text: "B. 10",
             },
             {
-                "text": "C. 14"
+                text: "C. 14",
             },
             {
-                "text": "D. 15"
+                text: "D. 15",
             },
             {
-                "text": "E. 25"
-            }
+                text: "E. 25",
+            },
         ],
-        "correctAnswer": 3,
-        "explanationEN": "",
-        "explanationCN": "正確答案D 代入計算即可"
+        correctAnswer: 3,
+        explanationEN: "Let's track the values: 1) a becomes 5 after a++, 2) b becomes 6 after b++, 3) c = 5 + 6 = 11, 4) a becomes 4 after a -= 1, 5) final output is a + c = 4 + 11 = 15.",
+        explanationCN: "讓我們追蹤值的變化：1) a++ 後 a 變成 5，2) b++ 後 b 變成 6，3) c = 5 + 6 = 11，4) a -= 1 後 a 變成 4，5) 最終輸出 a + c = 4 + 11 = 15。",
     },
     {
         "id": 18,
@@ -938,8 +942,8 @@ System.out.println(404 / 10 * 10 + 1);
             }
         ],
         "correctAnswer": 3,
-        "explanationEN": "",
-        "explanationCN": "正確答案D 代入計算即可"
+        "explanationEN": "Let's solve step by step: 404 / 10 = 40 (integer division), then 40 * 10 = 400, finally 400 + 1 = 401. The order of operations follows standard arithmetic rules.",
+        "explanationCN": "正確答案D 代入計算即可：404 / 10 = 40（整數除法），然後 40 * 10 = 400，最後 400 + 1 = 401。",
     },
     {
         "id": 19,
@@ -975,8 +979,8 @@ System.out.println(5 + a / b * c - 1);
             }
         ],
         "correctAnswer": 2,
-        "explanationEN": "",
-        "explanationCN": "正確答案C 代入計算即可"
+        "explanationEN": "Let's evaluate the expression: First a/b = 5/2 = 2 (integer division), then 2 * c = 2 * 3.0 = 6.0, then 5 + 6.0 = 11.0, finally 11.0 - 1 = 10.0",
+        "explanationCN": "正確答案C，計算順序：先 a/b = 5/2 = 2（整數除法），然後 2 * c = 2 * 3.0 = 6.0，接著 5 + 6.0 = 11.0，最後 11.0 - 1 = 10.0",
     },
     {
         "id": 20,
@@ -1018,8 +1022,8 @@ num /= d;
             }
         ],
         "correctAnswer": 1,
-        "explanationEN": "",
-        "explanationCN": "正確答案B "
+        "explanationEN": "The code first copies a to c and adds 3, then copies b to d and decrements it. Finally, it converts c to double and divides by d. This is equivalent to (a + 3)/(b - 1).",
+        "explanationCN": "程式首先將 a 複製到 c 並加 3，然後將 b 複製到 d 並減 1。最後將 c 轉換為 double 並除以 d。這相當於 (a + 3)/(b - 1)。",
     },
     {
         "id": 21,
@@ -1064,57 +1068,11 @@ double average = (double)(sum / 2);
         "explanationCN": "因為sum是int，所以sum/2是整數除法，會截斷小數部分。因此，平均值會小於預期的結果。"
     },
     {
-        "id": 20,
-        "question": {
-            "text": "Which of the following best describes the behavior of the code segment?",
-            "code": {
-                "content": `
-/*
-In the code segment below, assume that the int variables a and b have been properly
-declared and initialized.
-*/
-int c = a;
-int d = b;
-c += 3;
-d--;
-double num = c;
-num /= d;
-                `,
-                "language": "java"
-            }
-        },
-        "code": "",
-        "language": "java",
-        "options": [
-            {
-                "text": "A. The code segment stores the value of (a + 3) / b int the variable num."
-            },
-            {
-                "text": "B. The code segment stores the value of (a + 3) / (b - 1) int the variable num."
-            },
-            {
-                "text": "C. The code segment stores the value of (a + 3) / (b - 2) int the variable num."
-            },
-            {
-                "text": "D. The code segment stores the value of (a + 3) / (1 - b) int the variable num."
-            },
-            {
-                "text": "E. The code segment causes a runtime error int the last line of code because num is type double and d is type int."
-            }
-        ],
-        "correctAnswer": 1,
-        "explanationEN": "",
-        "explanationCN": "正確答案B "
-    },
-    {
         "id": 22,
         "question": {
             "text": "What is printed as a result of executing the code segment?",
             "code": {
                 "content": `
-/*
-Consider the following code segment.
-*/
 double num = 9/4;
 System.out.print(num);
 System.out.print(" ");
@@ -1123,28 +1081,28 @@ System.out.print((int) num);
                 "language": "java"
             }
         },
-        "code": "",
-        "language": "java",
-        "options": [
+        code: "",
+        language: "java",
+        options: [
             {
-                "text": "A. 2 2"
+                text: "A. 2 2",
             },
             {
-                "text": "B. 2.0 2"
+                text: "B. 2.0 2",
             },
             {
-                "text": "C. 2.0 2.0"
+                text: "C. 2.0 2.0",
             },
             {
-                "text": "D. 2.25 2"
+                text: "D. 2.25 2",
             },
             {
-                "text": "E. 2.25 2.0"
-            }
+                text: "E. 2.25 2.0",
+            },
         ],
-        "correctAnswer": 2,
-        "explanationEN": "The division 9/4 is an int division, which truncates the decimal part. Therefore, num is 2.0.",
-        "explanationCN": "9/4是整數除法，所以num是2.0"
+        correctAnswer: 1,
+        explanationEN: "The expression 9/4 performs integer division first (resulting in 2), then assigns to double num (becoming 2.0). When printed, it shows as '2.0'. The second print casts 2.0 to int, showing as '2'.",
+        explanationCN: "表達式 9/4 先進行整數除法（結果為2），然後賦值給 double 型別的 num（變成2.0）。列印時顯示為 '2.0'。第二次列印將 2.0 轉換為 int，顯示為 '2'。",
     },
     {
         "id": 23,
@@ -1155,9 +1113,9 @@ System.out.print((int) num);
 /*
 Consider the following code segment.
 */
-double x = 4.5;
-int y = (int)x * 2;
-System.out.print(y);
+double x = (int) (5.5 - 2.5);
+double y = (int) 5.5 - 2.5;
+System.out.println(x - y);
                 `,
                 "language": "java"
             }
@@ -1166,24 +1124,26 @@ System.out.print(y);
         "language": "java",
         "options": [
             {
-                "text": "A. 8"
+                "text": "A. -1.0"
             },
             {
-                "text": "B. 8.0"
+                "text": "B. -0.5"
             },
             {
-                "text": "C. 9"
+                "text": "C. 0.0"
             },
             {
-                "text": "D. 9.0"
+                "text": "D. 0.5"
             },
             {
-                "text": "E. 10"
+                "text": "E. 1.0"
             }
         ],
-        "correctAnswer": 0,
-        "explanationEN": "The cast to int truncates the decimal part, so y is 9.",
-        "explanationCN": "因為(int)x * 2 會先把x進行強型態轉換，因此捨棄小數點，變為4，再乘以2，y變為8"
+        "correctAnswer": 3,
+        "explanationEN": 
+            "Let's solve step by step: 1) x = (int)(5.5 - 2.5) = (int)(3.0) = 3.0, 2) y = (int)5.5 - 2.5 = 5 - 2.5 = 2.5, 3) x - y = 3.0 - 2.5 = 0.5",
+        "explanationCN": 
+            "讓我們逐步解決：1) x = (int)(5.5 - 2.5) = (int)(3.0) = 3.0，2) y = (int)5.5 - 2.5 = 5 - 2.5 = 2.5，3) x - y = 3.0 - 2.5 = 0.5",
     },
     {
         "id": 24,
@@ -1220,9 +1180,11 @@ System.out.println(x - y);
                 "text": "E. 1.0"
             }
         ],
-        "correctAnswer": 1,
-        "explanationEN": "Because the sum is an int, the division sum/2 is an int division, which truncates the decimal part. Therefore, the average will be less than the expected result for odd values of sum.",
-        "explanationCN": ""
+        "correctAnswer": 3,
+        "explanationEN": 
+            "Let's solve step by step: 1) x = (int)(5.5 - 2.5) = (int)(3.0) = 3.0, 2) y = (int)5.5 - 2.5 = 5 - 2.5 = 2.5, 3) x - y = 3.0 - 2.5 = 0.5",
+        "explanationCN": 
+            "讓我們逐步解決：1) x = (int)(5.5 - 2.5) = (int)(3.0) = 3.0，2) y = (int)5.5 - 2.5 = 5 - 2.5 = 2.5，3) x - y = 3.0 - 2.5 = 0.5",
     },
     {
         "id": 25,
@@ -1299,8 +1261,10 @@ III. (double) (2 / 4 + 3)
                 "text": "E. I, II, and III"
             }
         ],
-        "correctAnswer": 4,
-        "explanationEN": "The code segment does not work as intended because the expression(int) (val + 0.5) rounds to the nearest integer only when val is positive.",
-        "explanationCN": "因為val是負數，所以(int) (val + 0.5)會變成-1，而不是-0.5"
+        "correctAnswer": 0,
+        "explanationEN": 
+            "Let's evaluate each: I. (double)2/4 + 3 = 0.5 + 3 = 3.5, II. (double)(2/4) + 3 = (double)0 + 3 = 3.0, III. (double)(2/4 + 3) = (double)(3) = 3.0. Only I evaluates to 3.5.",
+        "explanationCN": 
+            "讓我們評估每個表達式：I. (double)2/4 + 3 = 0.5 + 3 = 3.5，II. (double)(2/4) + 3 = (double)0 + 3 = 3.0，III. (double)(2/4 + 3) = (double)(3) = 3.0。只有 I 的結果是 3.5。",
     }
 ];

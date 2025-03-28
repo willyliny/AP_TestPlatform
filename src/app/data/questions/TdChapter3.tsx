@@ -124,8 +124,8 @@ if ((a + b) * (a - b) != (a * a) - (b * b))
             { text: "false" }
         ],
         correctAnswer: 4,
-        explanationEN: "Let's evaluate step by step: 1) (5 < 8) evaluates to true, 2) (5 == 8) evaluates to false, 3) true == false evaluates to false",
-        explanationCN: "讓我們逐步評估：1) (5 < 8) 結果為 true，2) (5 == 8) 結果為 false，3) true == false 結果為 false"
+        explanationEN: "Let's evaluate step by step: 1) (5 < 8) evaluates to true because 5 is less than 8, 2) (5 == 8) evaluates to false because 5 is not equal to 8, 3) The expression (true == false) evaluates to false because true and false are different boolean values. Therefore, x is assigned the value false.",
+        explanationCN: "讓我們逐步評估：1) (5 < 8) 結果為 true，因為 5 小於 8，2) (5 == 8) 結果為 false，因為 5 不等於 8，3) 表達式 (true == false) 結果為 false，因為 true 和 false 是不同的布林值。因此，x 被賦值為 false。"
     },
     {
         id: 6,
@@ -146,8 +146,8 @@ if ((a + b) * (a - b) != (a * a) - (b * b))
             { text: "x = 25 and y = 30" }
         ],
         correctAnswer: 2,
-        explanationEN: "For x = 10 and y = 30: (10 <= 10) == (30 > 25) evaluates to true == true, which is true. Both conditions are true, making them equal.",
-        explanationCN: "對於 x = 10 和 y = 30：(10 <= 10) == (30 > 25) 等價於 true == true，結果為 true。兩個條件都為真，使它們相等。"
+        explanationEN: "For x = 10 and y = 30: 1) (10 <= 10) evaluates to true because 10 equals 10, 2) (30 > 25) evaluates to true because 30 is greater than 25, 3) true == true evaluates to true. Both conditions are true, making them equal. Other options fail: for x = 8, y = 25 both sides are false; for x = 10, y = 10 the right side is false; for x = 15, y = 30 the left side is false; for x = 25, y = 30 the left side is false.",
+        explanationCN: "對於 x = 10 和 y = 30：1) (10 <= 10) 結果為 true，因為 10 等於 10，2) (30 > 25) 結果為 true，因為 30 大於 25，3) true == true 結果為 true。兩個條件都為真，使它們相等。其他選項都不符合：對於 x = 8，y = 25 兩邊都為假；對於 x = 10，y = 10 右邊為假；對於 x = 15，y = 30 左邊為假；對於 x = 25，y = 30 左邊為假。"
     },
     {
         id: 7,
@@ -282,8 +282,8 @@ else if (density > 999)
             }
         ],
         correctAnswer: 3,
-        explanationEN: "Option A correctly implements the categorization logic: if density > 3000, it's urban; if density > 999 (and ≤ 3000 due to the else if), it's suburban; otherwise (density ≤ 999), it's rural. The code uses proper if-else if-else structure to ensure exactly one category is assigned.",
-        explanationCN: "選項 A 正確實現了分類邏輯：如果密度 > 3000，則為城市；如果密度 > 999（且 ≤ 3000，因為使用了 else if），則為郊區；否則（密度 ≤ 999），則為鄉村。代碼使用了正確的 if-else if-else 結構來確保只分配一個類別。"
+        explanationEN: "Let's analyze each option: 1) Option I correctly implements the categorization using if-else if-else structure, ensuring exactly one category is assigned based on density thresholds. 2) Option II is incorrect because it uses independent if statements that could lead to multiple assignments. 3) Option III has correct logic but is incomplete as it's missing the return statement and variable declaration. Therefore, only options I and III have correct logic, but III is incomplete.",
+        explanationCN: "讓我們分析每個選項：1) 選項 I 使用 if-else if-else 結構正確實現了分類，確保根據密度閾值只分配一個類別。2) 選項 II 不正確，因為它使用獨立的 if 語句可能導致多次賦值。3) 選項 III 邏輯正確但不完整，因為缺少返回語句和變量聲明。因此，只有選項 I 和 III 具有正確的邏輯，但 III 不完整。"
     },
     {
         id: 10,
@@ -330,8 +330,8 @@ else
             }
         ],
         correctAnswer: 0,
-        explanationEN: "When randomNumber = 0.70, the code will set event to both 1 and 2, which is incorrect. The code should use else if for the second condition to ensure event is set to exactly one value.",
-        explanationCN: "當 randomNumber = 0.70 時，代碼會將 event 設置為 1 和 2，這是不正確的。代碼應該在第二個條件使用 else if 來確保 event 只被設置為一個值。"
+        explanationEN: "When randomNumber = 0.70: 1) First if (randomNumber <= 0.70) is true, so event becomes 1, 2) Second if (randomNumber <= 0.80) is also true, so event becomes 2, 3) This shows that when randomNumber = 0.70, the code will incorrectly set event to both 1 and 2 in sequence. The code should use else if statements to ensure event is set to exactly one value.",
+        explanationCN: "當 randomNumber = 0.70 時：1) 第一個 if (randomNumber <= 0.70) 為真，所以 event 變為 1，2) 第二個 if (randomNumber <= 0.80) 也為真，所以 event 變為 2，3) 這表明當 randomNumber = 0.70 時，代碼會錯誤地依序將 event 設置為 1 和 2。代碼應該使用 else if 語句來確保 event 只被設置為一個值。"
     },
     {
         id: 11,
@@ -373,9 +373,9 @@ public boolean isLeapYear(int val)
                 text: "E. isLeapYear(2010)"
             }
         ],
-        correctAnswer: 3,
-        explanationEN: "The method incorrectly returns true for all multiples of 4, even if they are multiples of 100 but not 400. For val = 400, this doesn't matter because 400 is a multiple of both 100 and 400, so returning true is correct.",
-        explanationCN: "該方法錯誤地對所有4的倍數都返回true，即使它們是100的倍數但不是400的倍數。對於 val = 400，這沒有影響，因為400同時是100和400的倍數，所以返回true是正確的。"
+        correctAnswer: 0,
+        explanationEN: "The method incorrectly returns true for isLeapYear(1900) because it only checks if the year is divisible by 4, without properly implementing the century rule (years divisible by 100 but not 400 are not leap years).",
+        explanationCN: "該方法錯誤地對 isLeapYear(1900) 返回 true，因為它只檢查年份是否能被4整除，而沒有正確實現世紀規則（能被100整除但不能被400整除的年份不是閏年）。"
     },
     {
         id: 12,
@@ -477,7 +477,7 @@ else
                 text: "E. There is no value for choice that will cause the two code segments to produce different output."
             }
         ],
-        correctAnswer: 1,
+        correctAnswer: 2,
         explanationEN: "When 5 ≤ choice ≤ 10, Code Segment A will print 'yellow' (due to the else), but Code Segment B will print 'yellow' only if choice is not < 5 (due to the separate if statements).",
         explanationCN: "當 5 ≤ choice ≤ 10 時，代碼段 A 會輸出 'yellow'（因為 else），但代碼段 B 只有在 choice 不小於 5 時才會輸出 'yellow'（因為是獨立的 if 語句）。"
     },
@@ -558,7 +558,7 @@ System.out.println(points);
                 text: "E. The two code segments print different values for all possible values of grade."
             }
         ],
-        correctAnswer: 1,
+        correctAnswer: 0,
         explanationEN: "Code Segment I correctly assigns one grade point value based on the grade ranges. Code Segment II has errors: it modifies 'grade' instead of 'points' in the second if statement, and multiple if statements can execute, leading to incorrect point totals for grades between 80-89.",
         explanationCN: "代碼段 I 根據成績範圍正確地分配一個等級分值。代碼段 II 有錯誤：在第二個 if 語句中錯誤地修改了 'grade' 而不是 'points'，並且多個 if 語句可能會執行，導致 80-89 分之間的成績計算錯誤。"
     },
@@ -636,7 +636,7 @@ else
                 text: "E. I, II, and III"
             }
         ],
-        correctAnswer: 1,
+        correctAnswer: 3,
         explanationEN: "Only code segment II will produce the same output as the original code. Code segment I uses print instead of println for 'YES' and has separate if statements that could both execute. Code segment III reverses the logic by testing for even numbers first.",
         explanationCN: "只有代碼段 II 會產生與原始代碼相同的輸出。代碼段 I 使用 print 而不是 println 輸出 'YES'，並且有獨立的 if 語句可能都會執行。代碼段 III 通過先測試偶數來反轉邏輯。"
     },
@@ -691,7 +691,7 @@ public static void message(int a, int b, int c)
                 text: "E. Z"
             }
         ],
-        correctAnswer: 1,
+        correctAnswer: 3,
         explanationEN: "Let's trace the code with message(5, 15, 5): 1) a < 10 is true, 2) b < 10 is false (no X), 3) prints Y, 4) c < 10 is true, 5) b > 10 is true, prints Z. Final output is XYZ.",
         explanationCN: "讓我們追蹤 message(5, 15, 5) 的執行：1) a < 10 為真，2) b < 10 為假（不輸出 X），3) 輸出 Y，4) c < 10 為真，5) b > 10 為真，輸出 Z。最終輸出為 XYZ。"
     },
@@ -779,7 +779,7 @@ public static int biggest(int a, int b, int c)
                 text: "E. biggest may not work correctly when b and c have equal values."
             }
         ],
-        correctAnswer: 1,
+        correctAnswer: 2,
         explanationEN: "The method fails when c has the greatest value and is equal to either a or b. For example, if a=5, b=5, c=5, it returns c, but if a=3, b=3, c=5, it incorrectly returns c when it should return 5.",
         explanationCN: "當 c 是最大值並且等於 either a 或 b 時，該方法會失敗。例如，如果 a=5，b=5，c=5，它返回 c，但如果 a=3，b=3，c=5，它錯誤地返回 c，而它應該返回 5。"
     },
@@ -841,7 +841,7 @@ else
                 text: "E. I, II, and III"
             }
         ],
-        correctAnswer: 1,
+        correctAnswer: 3,
         explanationEN: "Only code segment III correctly implements the grading logic. Code segment I uses independent if statements that could lead to multiple assignments. Code segment II uses incorrect syntax for range checking (84 <= score <= 92 is not valid Java).",
         explanationCN: "只有代碼段 III 正確實現了評分邏輯。代碼段 I 使用獨立的 if 語句可能導致多次賦值。代碼段 II 使用了不正確的範圍檢查語法（84 <= score <= 92 在 Java 中是無效的）。"
     },
@@ -1030,7 +1030,7 @@ public static String classify(int volume)
                 text: "E. 115"
             }
         ],
-        correctAnswer: 0,
+        correctAnswer: 4,
         explanationEN: "The method has logical errors in its if-else structure. For volume = 80, it correctly returns 'Minicompact' because it's less than 85. However, for other values, the logic fails because: 1) Any value < 120 is classified as 'Mid-Size', 2) The conditions for other categories are unreachable.",
         explanationCN: "該方法的 if-else 結構有邏輯錯誤。對於 volume = 80，它正確返回 'Minicompact'，因為它小於 85。但對於其他值，邏輯失敗是因為：1) 任何小於 120 的值都被歸類為 'Mid-Size'，2) 其他類別的條件無法到達。"
     },
@@ -1110,7 +1110,7 @@ if (bonusThree)
                 text: "E. The expression will always evaluate to true."
             }
         ],
-        correctAnswer: 2,
+        correctAnswer: 1,
         explanationEN: "Let's evaluate step by step: 1) When a is false, the left side is false && b = false, but right side is false && b = false, 2) When a is true and b is false, left side is true && false = false, right side is true && false = false, 3) When both are true, left side is true && true = true, right side is true && true = true. Therefore, the expression is true only when both a and b are true.",
         explanationCN: "讓我們逐步評估：1) 當 a 為假時，左邊是 false && b = false，右邊是 false && b = false，2) 當 a 為真且 b 為假時，左邊是 true && false = false，右邊是 true && false = false，3) 當兩者都為真時，左邊是 true && true = true，右邊是 true && true = true。因此，表達式只在 a 和 b 都為真時才為真。"
     },
@@ -1250,7 +1250,7 @@ if (start < end)
                 text: "E. 16"
             }
         ],
-        correctAnswer: 3,
+        correctAnswer: 1,
         explanationEN: "Let's trace the code: 1) Initially start=4, end=5, keepGoing=true, 2) First if: 4<5 && true is true, 3) Nested if: 5>0 is true, so start=6, end=6, 4) Second if: 6<6 is false, so end stays 6, 5) Finally end=10 (6+4).",
         explanationCN: "讓我們追蹤代碼：1) 初始 start=4，end=5，keepGoing=true，2) 第一個 if：4<5 && true 為真，3) 嵌套 if：5>0 為真，所以 start=6，end=6，4) 第二個 if：6<6 為假，所以 end 保持為 6，5) 最後 end=10 (6+4)。"
     },
@@ -1301,7 +1301,7 @@ if (x < y)
             { text: "a = false, b = true, x = 3" },
             { text: "a = false, b = false, x = 11" }
         ],
-        correctAnswer: 1,
+        correctAnswer: 2,
         explanationEN: "Let's trace the code: 1) x=7, y=4, a=false, b=false initially, 2) x>y is true (7>4), 3) x%y=3 which is >= 3, so a=true and x=3 (7-4), 4) x<y is false (3 not < 4), so b stays false and x stays 3.",
         explanationCN: "讓我們追蹤代碼：1) 初始 x=7，y=4，a=false，b=false，2) x>y 為真 (7>4)，3) x%y=3 大於等於 3，所以 a=true 且 x=3 (7-4)，4) x<y 為假 (3 不小於 4)，所以 b 保持為 false 且 x 保持為 3。"
     },
@@ -1385,7 +1385,7 @@ II.
             { text: "D. Expression I and expression II evaluate to the same value only when A and B differ." },
             { text: "E. Expression I and expression II evaluate to the same value whenever A is true." }
         ],
-        correctAnswer: 0,
+        correctAnswer: 3,
         explanationEN: "Let's analyze all cases: 1) When A=true, B=true: I=true, II=false, 2) When A=true, B=false: I=false, II=false, 3) When A=false, B=true: I=false, II=false, 4) When A=false, B=false: I=false, II=true. The expressions always evaluate to different values.",
         explanationCN: "讓我們分析所有情況：1) 當 A=true，B=true 時：I=true，II=false，2) 當 A=true，B=false 時：I=false，II=false，3) 當 A=false，B=true 時：I=false，II=false，4) 當 A=false，B=false 時：I=false，II=true。這些表達式總是得到不同的值。"
     },
@@ -1797,9 +1797,9 @@ public int someCode(int a, int b, int c)
             { text: "D. (a != b) && (b <= 7)" },
             { text: "E. (a == b) && (b > 7)" }
         ],
-        correctAnswer: 4,
-        explanationEN: "Let's simplify: 1) !(!( a != b)) simplifies to (a != b), then !(a != b) simplifies to (a == b), 2) The original expression becomes (a == b) && (b > 7), which matches option E.",
-        explanationCN: "讓我們簡化：1) !(!( a != b)) 簡化為 (a != b)，然後 !(a != b) 簡化為 (a == b)，2) 原始表達式變為 (a == b) && (b > 7)，這與選項 E 相符。"
+        correctAnswer: 1,
+        explanationEN: "Let's simplify: 1) !(!( a != b)) simplifies to (a != b), 2) The original expression becomes (a != b) && (b > 7), which matches option B.",
+        explanationCN: "讓我們簡化：1) !(!( a != b)) 簡化為 (a != b)，2) 原始表達式變為 (a != b) && (b > 7)，這與選項 B 相符。"
     },
     {
         id: 46,
@@ -1880,9 +1880,9 @@ public class SomeClass
             { text: "D. 300 100 300" },
             { text: "E. 300 300 300" }
         ],
-        correctAnswer: 3,
-        explanationEN: "Let's analyze the code: 1) 'one' and 'two' are created as separate objects with num=100, 2) 'three' is assigned to reference the same object as 'one', 3) When one.increment(200) is called, it adds 200 to num making it 300, 4) Since 'three' references the same object as 'one', it sees the same value (300), 5) 'two' is a separate object, so its num remains 100. Therefore, the output is '300 100 300'.",
-        explanationCN: "讓我們分析代碼：1) 'one' 和 'two' 被創建為獨立的對象，num=100，2) 'three' 被賦值為引用與 'one' 相同的對象，3) 當調用 one.increment(200) 時，它將 num 增加 200 變成 300，4) 由於 'three' 引用與 'one' 相同的對象，所以它看到相同的值（300），5) 'two' 是一個獨立的對象，所以它的 num 保持為 100。因此，輸出為 '300 100 300'。"
+        correctAnswer: 2,
+        explanationEN: "Let's analyze the code: 1) 'one' and 'two' are created as separate objects with num=100, 2) 'three' is assigned to reference the same object as 'one', 3) When one.increment(200) is called, it adds 200 to num making it 300, 4) Since 'three' references the same object as 'one', it sees the same value (300), 5) 'two' is a separate object, so its num remains 100. Therefore, the output is '300 100 100'.",
+        explanationCN: "讓我們分析代碼：1) 'one' 和 'two' 被創建為獨立的對象，num=100，2) 'three' 被賦值為引用與 'one' 相同的對象，3) 當調用 one.increment(200) 時，它將 num 增加 200 變成 300，4) 由於 'three' 引用與 'one' 相同的對象，所以它看到相同的值（300），5) 'two' 是一個獨立的對象，所以它的 num 保持為 100。因此，輸出為 '300 100 100'。"
     },
     {
         id: 48,
@@ -2029,7 +2029,7 @@ III. borrower.getName() != null
             { text: "II and III" }
         ],
         correctAnswer: 1,
-        explanationEN: "The condition borrower != null is the correct way to check if borrower has been assigned a Person object. This prevents a NullPointerException when trying to call getName() on a null reference.",
-        explanationCN: "條件 borrower != null 是檢查 borrower 是否已被賦值為 Person 對象的正確方式。這可以防止在對空引用調用 getName() 時發生 NullPointerException。"
+        explanationEN: "The condition borrower.getName() != null is the safest way to check if the getName() method will return a valid value, preventing any potential NullPointerException when displaying the borrower's name.",
+        explanationCN: "條件 borrower.getName() != null 是檢查 getName() 方法是否會返回有效值的最安全方式，可以防止在顯示借閱者姓名時發生任何潛在的 NullPointerException。"
     }
 ]

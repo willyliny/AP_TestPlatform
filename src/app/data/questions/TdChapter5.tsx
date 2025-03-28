@@ -1333,7 +1333,7 @@ public class Item
             { text: "D. II and III only" },
             { text: "E. I, II, and III" }
         ],
-        correctAnswer: 4,
+        correctAnswer: 3,
         explanationEN: "All three implementations are correct:\n\nI. Correctly calculates:\n- yrs = number of complete years from extraMonths (extraMonths / 12)\n- mos = remaining months (extraMonths % 12)\n- Updates years and months appropriately\n\nII. Correctly:\n- Converts everything to months (years * 12 + months + extraMonths)\n- Extracts new years (totalMonths / 12)\n- Extracts new months (totalMonths % 12)\n\nIII. Correctly:\n- Adds extra months to current months\n- Calculates additional years from total months (totalMonths / 12)\n- Sets remaining months (totalMonths % 12)\n\nAll three implementations maintain the invariant that months stays between 0 and 11.",
         explanationCN: "所有三種實現都是正確的：\n\nI. 正確計算：\n- yrs = 從extraMonths得到的完整年數（extraMonths / 12）\n- mos = 剩餘月數（extraMonths % 12）\n- 適當更新年份和月份\n\nII. 正確：\n- 將所有轉換為月份（years * 12 + months + extraMonths）\n- 提取新的年份（totalMonths / 12）\n- 提取新的月份（totalMonths % 12）\n\nIII. 正確：\n- 將額外月份加到當前月份\n- 從總月數計算額外年份（totalMonths / 12）\n- 設置剩餘月份（totalMonths % 12）\n\n所有三種實現都保持了months在0到11之間的不變性。"
     },

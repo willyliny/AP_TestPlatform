@@ -218,7 +218,7 @@ public int mystery(int num)
             { text: "D. 103" },
             { text: "E. 1034" }
         ],
-        correctAnswer: 2,
+        correctAnswer: 3,
         explanationEN: "Let's trace mystery(1034): 1) x=1034, 1034/10=103, 103%2=1, continue, 2) x=103, 103/10=10, 10%2=0, return 103, 3) Therefore, the method returns 34.",
         explanationCN: "讓我們追蹤 mystery(1034)：1) x=1034，1034/10=103，103%2=1，繼續，2) x=103，103/10=10，10%2=0，返回 103，3) 因此，該方法返回 34。"
     },
@@ -311,7 +311,7 @@ while(k < 10)
             { text: "D. 0 2 0 2 0 2 0" },
             { text: "E. 0 1 2 1 2 1 2" }
         ],
-        correctAnswer: 0,
+        correctAnswer: 3,
         explanationEN: "Let's trace the loop: 1) k=0: prints 0, k becomes 2, 2) k=2: prints 2, k becomes 3, 3) k=3: prints 0, k becomes 5, 4) k=5: prints 2, k becomes 6, 5) k=6: prints 0, k becomes 8, 6) k=8: prints 2, k becomes 9, 7) Loop ends as 9 is not < 10. Output is '0 2 1 0 2'.",
         explanationCN: "讓我們追蹤循環：1) k=0：打印 0，k 變為 2，2) k=2：打印 2，k 變為 3，3) k=3：打印 0，k 變為 5，4) k=5：打印 2，k 變為 6，5) k=6：打印 0，k 變為 8，6) k=8：打印 2，k 變為 9，7) 循環結束因為 9 不小於 10。輸出為 '0 2 1 0 2'。"
     },
@@ -344,7 +344,7 @@ while ( /* condition */ )
             { text: "I and III only" },
             { text: "I, II, and III" }
         ],
-        correctAnswer: 2,
+        correctAnswer: 4,
         explanationEN: "Let's analyze each condition:\nI. x < 0: Nothing will be printed because x starts at 1 and increases.\nII. x <= 1: Nothing will be printed because x starts at 1 and immediately becomes 3.\nIII. x < 10: Will print even numbers (2, 4, 6, 8) before x becomes 11.\nTherefore, both I and II will result in nothing being printed."
     },
     {
@@ -431,7 +431,7 @@ while ( /* missing code */ )
             { text: "I and III only" },
             { text: "I, II, and III" }
         ],
-        correctAnswer: 0,
+        correctAnswer: 3,
         explanationEN: "Let's analyze each condition:\n1) x < 6: Will print 1, 3, 5 (stops when x becomes 7)\n2) x != 6: Will print 1, 3, 5, 7, 9... (never stops as x skips 6)\n3) x < 7: Will print 1, 3, 5, 7 (includes 7)\nOnly condition I produces exactly '1 3 5'"
     },
     {
@@ -503,7 +503,7 @@ public static int mystery(int n)
             { text: "D. n will sometimes be greater than 2 at // Point C." },
             { text: "E. n will always be greater than 2 at // Point B." }
         ],
-        correctAnswer: 1,
+        correctAnswer: 3,
         explanationEN: "Let's analyze each statement:\n1) A is false: x is always > 1 at Point B after first iteration\n2) B is true: x starts at 1 and only increases in the loop\n3) C is false: n starts with input value and can be > 2 at Point A\n4) D is false: n is always ≤ 2 at Point C due to loop condition\n5) E is false: n decreases in loop, can be ≤ 2 at Point B\nTherefore, only B is true."
     },
     {
@@ -542,7 +542,7 @@ public static int mystery(int n)
             { text: "D. n will sometimes be greater than 2 at // Point C." },
             { text: "E. n will always be greater than 2 at // Point B." }
         ],
-        correctAnswer: 1,
+        correctAnswer: 4,
         explanationEN: "Let's analyze each statement:\n1) A is false: x is always > 1 at Point B after first iteration\n2) B is true: x starts at 1 and only increases in the loop\n3) C is false: n starts with input value and can be > 2 at Point A\n4) D is false: n is always ≤ 2 at Point C due to loop condition\n5) E is false: n decreases in loop, can be ≤ 2 at Point B\nTherefore, only B is true."
     },
     {
@@ -1048,7 +1048,7 @@ for (int k = 0; k < 20; k = k + 2)
             { text: "D. 1 4 7 10 13 16 19" },
             { text: "E. 0 2 4 6 8 10 12 14 16 18" }
         ],
-        correctAnswer: 0,
+        correctAnswer: 1,
         explanationEN: "Let's analyze the code:\n1) k starts at 0 and increases by 2 (k = k + 2)\n2) This means k will be: 0, 2, 4, 6, 8, 10, 12, 14, 16, 18\n3) We only print k when k % 3 == 1\n4) Among these numbers, only 4 and 16 give remainder 1 when divided by 3\nTherefore, the output is '4 16'",
         explanationCN: "讓我們分析代碼：\n1) k 從 0 開始，每次加 2 (k = k + 2)\n2) 這意味著 k 將是：0, 2, 4, 6, 8, 10, 12, 14, 16, 18\n3) 只有當 k % 3 == 1 時才打印 k\n4) 在這些數字中，只有 4 和 16 除以 3 的餘數為 1\n因此，輸出是 '4 16'"
     },
@@ -1259,7 +1259,7 @@ public void numberCheck(int maxNum)
             { text: "D. 5 25 10" },
             { text: "E. 30 25 10" }
         ],
-        correctAnswer: 1,
+        correctAnswer: 3,
         explanationEN: "Let's analyze the method for maxNum=50:\n1) typeA counts numbers divisible by both 2 and 5: 10,20,30,40,50 (5 numbers)\n2) typeB counts numbers divisible by 2: 2,4,6,...,50 (25 numbers)\n3) typeC counts numbers divisible by 5: 5,10,15,...,50 (10 numbers)\nTherefore, output is '5 25 10'",
         explanationCN: "讓我們分析 maxNum=50 時的方法：\n1) typeA 計算同時能被 2 和 5 整除的數：10,20,30,40,50（5個數）\n2) typeB 計算能被 2 整除的數：2,4,6,...,50（25個數）\n3) typeC 計算能被 5 整除的數：5,10,15,...,50（10個數）\n因此，輸出為 '5 25 10'"
     },
@@ -1289,7 +1289,7 @@ public void numberCheck(int maxNum)
             { text: "D. I and II" },
             { text: "E. I and III" }
         ],
-        correctAnswer: 0,
+        correctAnswer: 4,
         explanationEN: "Let's analyze each option:\n1) Option I (j from 0 to 2): Prints '0123' three times (correct)\n2) Option II (j from 1 to 2): Prints '0123' only twice (not enough)\n3) Option III (j from 1 to 3): Prints '0123' three times but starts from 1 (wrong start)\nOnly option I produces exactly three lines of '0123'",
         explanationCN: "讓我們分析每個選項：\n1) 選項 I（j 從 0 到 2）：打印三次 '0123'（正確）\n2) 選項 II（j 從 1 到 2）：打印兩次 '0123'（次數不夠）\n3) 選項 III（j 從 1 到 3）：打印三次 '0123' 但從 1 開始（起始錯誤）\n只有選項 I 正確產生三行 '0123'"
     },
@@ -1320,7 +1320,7 @@ System.out.println(count);`,
             { text: "D. for (int y = 3; y > 0; y--)" },
             { text: "E. for (int y = 0; y < x; y++)" }
         ],
-        correctAnswer: 1,
+        correctAnswer: 4,
         explanationEN: "Let's analyze how to get count=6:\n1) We need a nested loop where the total iterations = 6\n2) Outer loop runs 3 times (x: 1 to 3)\n3) Inner loop needs to run 2 times for each outer iteration\n4) Option B runs inner loop 3 times (y: 0,1,2)\n5) Total iterations = 3 * 2 = 6",
         explanationCN: "讓我們分析如何得到 count=6：\n1) 我們需要一個嵌套循環，總迭代次數 = 6\n2) 外循環運行 3 次（x：1 到 3）\n3) 內循環需要對每個外循環運行 2 次\n4) 選項 B 運行內循環 3 次（y：0,1,2）\n5) 總迭代次數 = 3 * 2 = 6"
     },
@@ -1353,7 +1353,7 @@ System.out.println(counter);`,
             { text: "D. 5" },
             { text: "E. 6" }
         ],
-        correctAnswer: 2,
+        correctAnswer: 3,
         explanationEN: "Let's count occurrences of 'a' not followed by 'b':\n1) 'a black' - not counted (a is followed by b)\n2) 'a cat' - counted (a is followed by c)\n3) 'sat' - counted (a is followed by t)\n4) 'a table' - counted (a is followed by t)\nTotal count = 3",
         explanationCN: "讓我們計算不被 'b' 跟隨的 'a' 的出現次數：\n1) 'a black' - 不計數（a 後面是 b）\n2) 'a cat' - 計數（a 後面是 c）\n3) 'sat' - 計數（a 後面是 t）\n4) 'a table' - 計數（a 後面是 t）\n總計數 = 3"
     },
@@ -1418,7 +1418,7 @@ public static String changeStr(String str)
             { text: "D. \"543\"" },
             { text: "E. \"54321\"" }
         ],
-        correctAnswer: 2,
+        correctAnswer: 1,
         explanationEN: "Let's trace the method with '12345':\n1) str.length() is 5, so i starts at 4\n2) str.length()/2 is 2 (integer division)\n3) i decrements by 2 each time\n4) i values: 4, 2\n5) Concatenates characters at positions 4,2: '5','3','1'\nTherefore returns '531'",
         explanationCN: "讓我們追蹤 '12345' 的方法：\n1) str.length() 是 5，所以 i 從 4 開始\n2) str.length()/2 是 2（整數除法）\n3) i 每次減 2\n4) i 的值：4, 2\n5) 連接位置 4,2 的字符：'5','3','1'\n因此返回 '531'"
     },

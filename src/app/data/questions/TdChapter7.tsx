@@ -612,7 +612,7 @@ numList.add(index, val);`,
             { text: "D. 3" },
             { text: "E. 4" }
         ],
-        correctAnswer: 0,
+        correctAnswer: 4,
         explanationEN: "The code fails for val=0 because the while loop condition is checked before comparing with the first element. When val=0, it's less than 1 (first element), but the loop never executes, incorrectly inserting 0 at index 0.",
         explanationCN: "當val=0時代碼失敗，因為while循環條件在與第一個元素比較之前就被檢查。當val=0時，它小於1（第一個元素），但循環永遠不會執行，錯誤地在索引0處插入0。"
     },
@@ -1136,7 +1136,7 @@ public static void selectSort(int[] numbers)
             { text: "D. [\"Ann\" \"Mike\" \"Bill\" \"Lisa\" \"Mary\" \"Jose\" \"Shari\" \"Walt\"]" },
             { text: "E. [\"Walt\" \"Shari\" \"Ann\" \"Lisa\" \"Mike\" \"Jose\" \"Mary\" \"Bill\"]" }
         ],
-        correctAnswer: 1,
+        correctAnswer: 3,
         explanationEN: "Let's track the array after each iteration:\n1) First pass (pass = 7):\n   - Finds largest element 'Walt'\n   - Swaps 'Walt' with last element -> [\"Ann\" \"Mike\" \"Lisa\" \"Shari\" \"Jose\" \"Mary\" \"Bill\" \"Walt\"]\n2) Second pass (pass = 6):\n   - Array stays the same as no larger element found\nTherefore, after two iterations, the array is [\"Ann\" \"Mike\" \"Lisa\" \"Shari\" \"Jose\" \"Mary\" \"Bill\" \"Walt\"]",
         explanationCN: "讓我們追蹤每次迭代後的數組狀態：\n1) 第一輪 (pass = 7)：\n   - 找到最大元素 'Walt'\n   - 將 'Walt' 與最後一個元素交換 -> [\"Ann\" \"Mike\" \"Lisa\" \"Shari\" \"Jose\" \"Mary\" \"Bill\" \"Walt\"]\n2) 第二輪 (pass = 6)：\n   - 數組保持不變，因為沒有找到更大的元素\n因此，兩次迭代後，數組為 [\"Ann\" \"Mike\" \"Lisa\" \"Shari\" \"Jose\" \"Mary\" \"Bill\" \"Walt\"]"
     },

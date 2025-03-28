@@ -34,11 +34,9 @@ export const TdChapter2Questions: QuizQuestion[] = [
                 text: "Nothing is printed, because numerical values cannot be added to a String object.",
             },
         ],
-        correctAnswer: 1,
-        explanationEN:
-            "print() method will print the string to the screen, but it will not print a new line. Therefore, the output is 'Hello System.out.println!!!'.",
-        explanationCN:
-            "print() 方法會將字串輸出到螢幕上，但不會換行。因此，輸出結果為 'Hello System.out.println!!!'。",
+        correctAnswer: 3,
+        explanationEN: "The string concatenation process: 1) Initially str = '0', 2) str += (str + 0 + 8) means '0' + ('0' + '0' + '8'), 3) When adding strings and numbers, everything is converted to strings and concatenated, resulting in '0008'.",
+        explanationCN: "字串連接過程：1) 初始 str = '0'，2) str += (str + 0 + 8) 意味著 '0' + ('0' + '0' + '8')，3) 當字串和數字相加時，所有內容都轉換為字串並連接，結果為 '0008'。",
     },
     {
         id: 2,
@@ -80,11 +78,9 @@ System.out.println(s);
                 text: "Nothing is printed because the code segment does not compile.",
             },
         ],
-        correctAnswer: 0,
-        explanationEN:
-            "Line 1: The asterisk character is not a valid character for a string literal. The correct code should be System.out.print(\"*\");",
-        explanationCN:
-            "Line 1: 星號字符不是字串文字的有效字符。正確的程式應該是 System.out.print(\"*\");",
+        correctAnswer: 3,
+        explanationEN: "The string concatenation process combines 'It is ' + true + claim + 1988 + ' but ' + false + claim + 1990 + '.'. When concatenating boolean and integer values with strings, they are automatically converted to their string representations.",
+        explanationCN: "字串連接過程將 'It is ' + true + claim + 1988 + ' but ' + false + claim + 1990 + '.' 組合在一起。當布林值和整數與字串連接時，它們會自動轉換為字串表示。",
     },
     {
         id: 3,
@@ -120,11 +116,9 @@ System.out.println(s);
                 text: "ABCDEF",
             },
         ],
-        correctAnswer: 3,
-        explanationEN:
-            "print() method will print the string to the screen, but it will not print a new line. Therefore, the output is D.",
-        explanationCN:
-            "因為 print() 方法不會換行，所以輸出結果為 D。",
+        correctAnswer: 2,
+        explanationEN: "substring(1,3) extracts characters from index 1 to 2 (BC), and substring(4) extracts from index 4 to the end (EF). When concatenated, they form 'BCEF'.",
+        explanationCN: "substring(1,3) 提取索引1到2的字符（BC），substring(4) 提取索引4到結尾的字符（EF）。連接後形成 'BCEF'。",
     },
     {
         id: 4,
@@ -161,10 +155,8 @@ System.out.print(temp.substring(0) + " " +
             },
         ],
         correctAnswer: 3,
-        explanationEN:
-            "Because z is an int variable, only I and II can be used to replace the missing code.",
-        explanationCN:
-            "因為 z 是 int 型別，所以只能使用 I 和 II。",
+        explanationEN: "Because z is an int variable, only I and II can be used to replace the missing code.",
+        explanationCN: "因為 z 是 int 型別，所以只能使用 I 和 II。",
     },
     {
         id: 5,
@@ -236,9 +228,9 @@ public static boolean containsArt(String s1, String s2, String s3)
                 text: "containsArt(\"darkroom\", \"cartoon\", \"articulate\")"
             }
         ],
-        correctAnswer: 1,
-        explanationEN: "The method concatenates all strings together before checking for 'art'. This means it might find 'art' at the boundaries between strings when concatenated, even if none of the original strings contained 'art'. For example, with 'start', 'article', 'Bart', none of these strings individually contains 'art', but when concatenated as 'startarticleBart', it finds 'art' at the boundary between 'start' and 'article'.",
-        explanationCN: "這個方法在檢查'art'之前將所有字串連接在一起。這意味著它可能會在連接後的字串邊界處找到'art'，即使原始字串都不包含'art'。例如，對於'start'、'article'、'Bart'，這些字串單獨都不包含'art'，但當連接成'startarticleBart'時，它在'start'和'article'的邊界處找到了'art'。"
+        correctAnswer: 0,
+        explanationEN: "Option A demonstrates the method's flaw. In 'rattrap similar today', none of the individual strings contain 'art', but when concatenated as 'rattrapsimilartoday', the method incorrectly finds 'art' at the boundary between words.",
+        explanationCN: "選項A展示了方法的缺陷。在 'rattrap similar today' 中，沒有任何單獨的字串包含 'art'，但當連接成 'rattrapsimilartoday' 時，方法錯誤地在單詞邊界處找到了 'art'。",
     },
     {
         id: 7,
@@ -277,8 +269,8 @@ public void processWords(String word1, String word2)
             }
         ],
         correctAnswer: 0,
-        explanationEN: "The method creates str2 from the last character of word2, then concatenates str2 with str1 to create result. When indexOf(str2) is called on result, it will always return 0 because str2 is at the beginning of result.",
-        explanationCN: "該方法從word2的最後一個字符創建str2，然後將str2與str1連接創建result。當在result上調用indexOf(str2)時，它總是返回0，因為str2在result的開頭。"
+        explanationEN: "The method creates str2 from the last character of word2, then puts it at the start of result (str2 + str1). When indexOf(str2) is called, it will always return 0 because str2 is at the beginning of result.",
+        explanationCN: "該方法從word2的最後一個字符創建str2，然後將其放在result的開頭（str2 + str1）。當調用indexOf(str2)時，它總是返回0，因為str2在result的開頭。",
     },
     {
         id: 8,
@@ -810,9 +802,9 @@ printProduct(num1, num2);
                 text: "The code will not compile because of a type mismatch in the method calls."
             }
         ],
-        correctAnswer: 1,
-        explanationEN: "printSum(5, 10.0) prints 15.0, and printProduct(5.0, 10) prints 50.0. The second method call has an implicit conversion of num1 to double.",
-        explanationCN: "printSum(5, 10.0) 輸出 15.0，printProduct(5.0, 10) 輸出 50.0。第二個方法調用中 num1 隱式轉換為 double。"
+        correctAnswer: 4,
+        explanationEN: "The code will not compile because in printProduct(num1, num2), num2 is a double but the method expects an int as its second parameter. There is no automatic narrowing conversion from double to int.",
+        explanationCN: "代碼無法編譯，因為在 printProduct(num1, num2) 中，num2 是 double 類型，但方法需要 int 作為第二個參數。沒有從 double 到 int 的自動窄化轉換。"
     },
     {
         id: 22,
@@ -986,42 +978,4 @@ III. public void one(int first, int second, int third)
         explanationEN: "Method I would cause a compile error because it has the same signature as the existing method. Methods II and III can be added because they have different parameter lists (different types or number of parameters).",
         explanationCN: "方法 I 會導致編譯錯誤，因為它與現有方法具有相同的簽名。方法 II 和 III 可以添加，因為它們具有不同的參數列表（不同的類型或參數數量）。"
     },
-    {
-        id: 26,
-        question: {
-            text: "Which of the following expressions evaluate to 3.5",
-            code: {
-                content: `
-/*
-*/
-I.   (double) 2 / 4 + 3
-II.  (double) (2 / 4) + 3
-III. (double) (2 / 4 + 3)
-`,
-                language: "java"
-            }
-        },
-        code: "",
-        language: "java",
-        options: [
-            {
-                text: "A. I only"
-            },
-            {
-                text: "B. III only"
-            },
-            {
-                text: "C. I and II only"
-            },
-            {
-                text: "D. II and III only"
-            },
-            {
-                text: "E. I, II, and III"
-            }
-        ],
-        correctAnswer: 0,
-        explanationEN: "Only expression I evaluates to 3.5. Let's analyze each: I. (double) 2 / 4 + 3 = 0.5 + 3 = 3.5, II. (double) (2 / 4) + 3 = (double) 0 + 3 = 3.0, III. (double) (2 / 4 + 3) = (double) 3 = 3.0",
-        explanationCN: "只有表達式 I 的結果是 3.5。分析每個表達式：I. (double) 2 / 4 + 3 = 0.5 + 3 = 3.5，II. (double) (2 / 4) + 3 = (double) 0 + 3 = 3.0，III. (double) (2 / 4 + 3) = (double) 3 = 3.0",
-    }
 ];
